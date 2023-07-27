@@ -1,0 +1,103 @@
+
+<!--  
+ <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Map Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="origin" (keyup.enter)="onSearch()" placeholder="Origin"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="destination" (keyup.enter)="onSearch()" placeholder="Destination"></ion-searchbar>
+  
+  
+  <ion-searchbar [(ngModel)]="stops" (keyup.enter)="onSearch()" placeholder="Add Stop"></ion-searchbar>
+  
+  <div id="map" style="margin-top: 10px; height: 400px;"></div>
+  
+</ion-content>
+ -->
+<!-- page.html -->
+<!-- home.page.html -->
+<!-- home.page.html -->
+<!-- home.page.html -->
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Map Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="origin" (keyup.enter)="onSearch()" placeholder="Origin"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="destination" (keyup.enter)="onSearch()" placeholder="Destination"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="stops" (keyup.enter)="onSearch()" placeholder="Add Stop"></ion-searchbar>
+
+  
+
+  <div id="map" style="margin-top: 10px; height: 400px;"></div>
+  <ion-button expand="full" color="primary" (click)="startNavigation()">Start Navigation</ion-button>
+  <ion-card *ngIf="isNavigationStarted">
+    <ion-card-header>
+      <ion-card-subtitle>Navigation</ion-card-subtitle>
+      <ion-card-title>Step {{ currentStepIndex + 1 }} of {{ route.steps.length }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content id="directions-panel">
+      <ion-list>
+        <ion-item *ngFor="let step of route.steps">
+          <ion-icon slot="start" [name]="getStepIcon(step)"></ion-icon>
+          <ion-label>{{ step.instructions }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+     -->
+
+<!-- 
+
+ 
+     <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Map Page
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+      <ion-searchbar [(ngModel)]="origin" (keyup.enter)="onSearch()" placeholder="Origin"></ion-searchbar>
+      <ion-searchbar [(ngModel)]="destination" (keyup.enter)="onSearch()" placeholder="Destination"></ion-searchbar>
+      <ion-searchbar [(ngModel)]="stops" (keyup.enter)="onSearch()" placeholder="Add Stop"></ion-searchbar>
+    
+          
+      <div id="map" style="margin-top: 10px; height: 400px;"></div>
+       
+      
+      -->
+       
+      
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>
+            Map Page
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content>
+        <ion-searchbar [(ngModel)]="origin" (keyup.enter)="onSearch()" placeholder="Origin"></ion-searchbar>
+        <ion-searchbar [(ngModel)]="destination" (keyup.enter)="onSearch()" placeholder="Destination"></ion-searchbar>
+        <ion-searchbar [(ngModel)]="stops" (keyup.enter)="onSearch()" placeholder="Add Stop"></ion-searchbar>
+      
+        <div id="map" style="margin-top: 10px; height: 400px;"></div>
+      
+        <div id="directions-panel"></div>
+      
+        <ion-button expand="full" (click)="startNavigation()" [disabled]="!directionsRenderer?.getDirections()?.routes?.length">Start</ion-button>
+      </ion-content>
+      
